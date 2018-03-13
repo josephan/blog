@@ -1,24 +1,37 @@
-# README
+## Dependecies
+```ruby
+ruby "2.4.1"
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+gem 'rails', '~> 5.1.5'
+gem 'graphql', '~> 1.7.13'
 
-Things you may want to cover:
+source 'https://<YOUR-SECRET-URL>@gems.graphql.pro/' do
+  gem 'graphql-pro', '1.6.5'
+end
+```
 
-* Ruby version
+## Steps To Reproduce
+1. `$ git clone git@github.com:josephan/blog.git && cd blog`
+2. change source for `graphql-pro` in `Gemfile` to your secret url
+3. `$ bundle`
+4. `$ yarn global add graphql-ruby-client`
+5. `$ rails db:create`
+6. `$ rails db:migrate`
+7. `$ rails server`
+8. visit `localhost:3000/graphql/dashboard` and create a client called `test`
+9. get the new client `test`'s secret
+10. sync the queries with `$ graphql-ruby-client sync --path=app/graphql/queries --url=http://localhost:3000/graphql/sync --client=test --secret=<CLIENT-SECRET>`
+11. send a persisted query `POST` request:
+```json
+POST: http://localhost:3000/graphql
+BODY:
 
-* System dependencies
+{
+	"operationName": "test/32e6b8ae2c981c5897af13c5072ac6a1",
+	"variables": {
+		"id": 1
+	}
+}
+```
+ 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
