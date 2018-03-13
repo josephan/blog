@@ -16,9 +16,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'graphql', '~> 1.7.13'
 
 # change <YOUR-SECRET-URL>
-source 'https://<YOUR-SECRET-URL>@gems.graphql.pro/' do
-  gem 'graphql-pro', '1.6.5'
-end
+# source 'https://<YOUR-SECRET-URL>@gems.graphql.pro/' do
+#   gem 'graphql-pro', '1.6.5'
+# end
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

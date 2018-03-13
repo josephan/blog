@@ -67,8 +67,9 @@ GEM
     ffi (1.9.23)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    graphiql-rails (1.4.5)
-      rails
+    graphiql-rails (1.4.10)
+      railties
+      sprockets-rails
     graphql (1.7.13)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
