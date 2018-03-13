@@ -27,10 +27,10 @@ POST: http://localhost:3000/graphql
 BODY:
 
 {
-	"operationName": "test/32e6b8ae2c981c5897af13c5072ac6a1",
-	"variables": {
-		"id": 1
-	}
+  "operationName": "test/32e6b8ae2c981c5897af13c5072ac6a1",
+  "variables": {
+    "id": 1
+  }
 }
 ```
  
