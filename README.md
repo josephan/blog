@@ -17,11 +17,12 @@ end
 4. `$ yarn global add graphql-ruby-client`
 5. `$ rails db:create`
 6. `$ rails db:migrate`
-7. `$ rails server`
-8. visit `localhost:3000/graphql/dashboard` and create a client called `test`
-9. get the new client `test`'s secret
-10. sync the queries with `$ graphql-ruby-client sync --path=app/graphql/queries --url=http://localhost:3000/graphql/sync --client=test --secret=<CLIENT-SECRET>`
-11. send a persisted query `POST` request:
+7. `$ rails db:seed`
+8. `$ rails server`
+9. visit `localhost:3000/graphql/dashboard` and create a client called `test`
+10. get the new client `test`'s secret
+11. sync the queries with `$ graphql-ruby-client sync --path=app/graphql/queries --url=http://localhost:3000/graphql/sync --client=test --secret=<CLIENT-SECRET>`
+12. send a persisted query `POST` request:
 ```json
 POST: http://localhost:3000/graphql
 BODY:
