@@ -7,5 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 author = Author.create(name: "joseph")
-Post.create(title: "Hello World", body: "GraphQL is cool!")
+post   = Post.create(title: "Hello World", body: "GraphQL is cool!", author: author)
+
+puts "Created author: #{author.inspect}"
+puts "Created post: #{post.inspect}"
 
